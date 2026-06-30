@@ -75,3 +75,19 @@ def simulate_server():
     print("Valid:", endpoint_verify(contract, config))
 
     return contract
+
+def audit(contract):
+    print("\nAudit Log")
+    print(contract.serialize())
+
+def summary():
+    print("\nServer configuration active")
+
+def main():
+    contract = simulate_server()
+    audit(contract)
+    summary()
+    print("Finished execution")
+
+if __name__ == "__main__":
+    main()
